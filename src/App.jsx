@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar   from "./components/Navbar";
 import Footer   from "./components/Footer";
 import Home       from "./pages/Home";
-import Seeds      from "./pages/Seeds";
-import SeedDetail from "./pages/SeedDetails";
+import Crops      from "./pages/Crops";
+import CropDetail from "./pages/CropDetails";
 import Categories from "./pages/Categories";
 import About      from "./pages/About";
 import Contact    from "./pages/Contact";
@@ -33,8 +33,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout><ScrollToTopWrapper /><Home /></Layout>} />
-        <Route path="/seeds" element={<Layout><ScrollToTopWrapper /><Seeds /></Layout>} />
-        <Route path="/seeds/:id" element={<Layout><ScrollToTopWrapper /><SeedDetail /></Layout>} />
+        <Route path="/crops" element={<Layout><ScrollToTopWrapper /><Crops /></Layout>} />
+        <Route path="/crops/:id" element={<Layout><ScrollToTopWrapper /><CropDetail /></Layout>} />
         <Route path="/categories" element={<Layout><ScrollToTopWrapper /><Categories /></Layout>} />
         <Route path="/about" element={<Layout><ScrollToTopWrapper /><About /></Layout>} />
         <Route path="/contact" element={<Layout><ScrollToTopWrapper /><Contact /></Layout>} />

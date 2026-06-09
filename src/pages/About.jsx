@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const team = [
   { name: "Arjun Verma",   role: "Founder & CEO",        initials: "AV", bg: "#EBF7DF", color: "#3A8C1E",
-    bio: "15 years in organic farming. Started SeedKart to make quality seeds accessible to every Indian household." },
+    bio: "15 years in organic farming. Started SeedKart to make quality crops accessible to every Indian household." },
   { name: "Meera Patel",   role: "Head of Horticulture", initials: "MP", bg: "#FFF3DC", color: "#E07B00",
-    bio: "M.Sc. Agriculture, Pune University. Leads seed selection, testing, and our growing guides program." },
+    bio: "M.Sc. Agriculture, Pune University. Leads crop selection, testing, and our growing guides program." },
   { name: "Rajan Nair",    role: "Operations Manager",   initials: "RN", bg: "#FDE8F8", color: "#B0309A",
     bio: "Ensures every order is packed with care and delivered on time across 20,000+ Indian pin codes." },
   { name: "Kavita Sharma", role: "Customer Success",     initials: "KS", bg: "#E2F7EC", color: "#1A7A44",
@@ -13,11 +13,11 @@ const team = [
 ];
 
 const milestones = [
-  { year: "2018", title: "Founded in Pune", desc: "Started with just 40 seed varieties and a small warehouse." },
+  { year: "2018", title: "Founded in Pune", desc: "Started with just 40 crop varieties and a small warehouse." },
   { year: "2019", title: "10,000 Orders",   desc: "Crossed our first major milestone with organic kitchen garden kits." },
   { year: "2021", title: "Pan-India Launch",desc: "Expanded delivery to all 28 states. Launched our expert gardening helpline." },
   { year: "2023", title: "50K+ Growers",    desc: "Our community of happy gardeners hit 50,000 across India." },
-  { year: "2024", title: "200+ Varieties",  desc: "Expanded catalogue to include rare heirloom and forest tree seeds." },
+  { year: "2024", title: "200+ Varieties",  desc: "Expanded catalogue to include rare heirloom and forest tree crops." },
 ];
 
 export default function About() {
@@ -46,16 +46,16 @@ export default function About() {
             <p style={{ fontSize: ".5rem", color: "var(--text-muted)", lineHeight: 1.8, marginBottom: "0.6rem" }}>
               SeedKart was born from a simple belief: <strong>every Indian home deserves a thriving garden.</strong>
               Whether you have a sprawling farm or just a sunny balcony, we believe you should have access
-              to the best seeds, the right knowledge, and genuine support.
+              to the best crops, the right knowledge, and genuine support.
             </p>
             <p style={{ fontSize: ".5rem", color: "var(--text-muted)", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              We source our seeds from trusted, certified farms across India and beyond. Every variety
+              We source our crops from trusted, certified farms across India and beyond. Every variety
               in our catalogue is lab-tested for purity and germination before it reaches you. We're
               proud to maintain an average germination rate of <strong style={{ color: "var(--green-dark)" }}>98%</strong> across
               our entire collection.
             </p>
-            <Link to="/seeds" className="btn btn-primary">
-              Explore Our Seeds <i className="bi bi-arrow-right ms-1" />
+            <Link to="/crops" className="btn btn-primary">
+              Explore Our Crops <i className="bi bi-arrow-right ms-1" />
             </Link>
           </div>
           <div className="col-lg-6">
@@ -77,7 +77,7 @@ export default function About() {
         >
           <div className="row g-4 text-center">
             {[
-              { num: "200+", lbl: "Seed Varieties"    },
+              { num: "200+", lbl: "Crop Varieties"    },
               { num: "50K+", lbl: "Happy Growers"     },
               { num: "98%",  lbl: "Germination Rate"  },
               { num: "7",    lbl: "Years of Trust"    },
@@ -178,10 +178,10 @@ export default function About() {
             Ready to Start Growing?
           </h3>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-            Explore our full catalogue of 200+ certified seeds.
+            Explore our full catalogue of 200+ certified crops.
           </p>
-          <Link to="/seeds" className="btn btn-primary btn-lg me-3">
-            Shop All Seeds
+          <Link to="/crops" className="btn btn-primary btn-lg me-3">
+            Shop All Crops
           </Link>
           <Link to="/contact" className="btn btn-outline-primary btn-lg">
             Talk to Our Experts

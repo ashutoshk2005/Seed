@@ -1,7 +1,7 @@
 // src/pages/Categories.jsx
 import { Link } from "react-router-dom";
-import { categories, seeds } from "../data/seeds";
-import SeedCard from "../components/SeedCard";
+import { categories, crops } from "../data/crops";
+import CropCard from "../components/CropCard";
 
 const catColors = {
   vegetable: { bg: "#EBF7DF", color: "#3A8C1E", border: "#b8dfa0" },
@@ -10,7 +10,7 @@ const catColors = {
   herb:      { bg: "#E2F7EC", color: "#1A7A44", border: "#9adcbd" },
   tree:      { bg: "#EBF2DF", color: "#4B6A1A", border: "#c0d88a" },
 };
-const catIcons  = { vegetable: "🥦", fruit: "🍉", flower: "🌸", herb: "🌿", tree: "🌳" };
+const catIcons  = { vegetable: "🥦", fruit: "🍉", flower: "🌸", herb: "🌿", tree: "🌾" };
 const catBannerDesc = {
   vegetable: "Fresh salads, curries, and more — grow your own organic vegetables.",
   fruit:     "From melons to papaya — enjoy homegrown tropical fruits.",
@@ -31,20 +31,22 @@ export default function Categories() {
               <li className="breadcrumb-item active">Categories</li>
             </ol>
           </nav>
-          <h1>Seed Categories</h1>
-          <p>Browse our full range of seeds by type and find exactly what your garden needs.</p>
+          <h1>Crop Categories</h1>
+          <p>Browse our full range of crops by type and find exactly what your garden needs.</p>
         </div>
       </div>
 
       <div className="container py-5">
         {/* Category overview cards */}
         <div className="row g-4 mb-5">
-          {categories.map((cat) => {
-            const style  = catColors[cat.id];
-            const count  = seeds.filter((s) => s.category === cat.id).length;
-            const topSeeds = seeds.filter((s) => s.category === cat.id && s.featured).slice(0, 3);
-            return (
-              <div className="col-md-6 col-lg-4" key={cat.id}>
+          {categories
+            .filter((cat) => cat.id !== "flower")
+            .map((cat) => {
+              const style  = catColors[cat.id];
+              const count  = crops.filter((c) => c.category === cat.id).length;
+              const topCrops = crops.filter((c) => c.category === cat.id && c.featured).slice(0, 3);
+              return (
+                <div className="col-md-6 col-lg-4" key={cat.id}>
                 <div
                   className="cat-overview-card"
                   style={{ borderColor: style.border }}
@@ -53,7 +55,7 @@ export default function Categories() {
                   <div className="cat-overview-card-header" style={{ background: style.bg }}>
                     <div className="emoji">{catIcons[cat.id]}</div>
                     <h3 style={{ color: style.color }}>
-                      {cat.label} Seeds
+                      {cat.id === "tree" ? "Crops" : `${cat.label} `}
                     </h3>
                     <p>
                       {catBannerDesc[cat.id]}
@@ -64,36 +66,36 @@ export default function Categories() {
                   <div className="cat-overview-card-body">
                     <div className="cat-overview-card-body-top">
                       <span className="count">{count} varieties available</span>
-                      <span
-                        className="badge"
-                        style={{
-                          background: style.bg, color: style.color,
-                        }}
-                      >
-                        {seeds.filter((s) => s.category === cat.id && s.featured).length} Featured
-                      </span>
+                        <span
+                          className="badge"
+                          style={{
+                            background: style.bg, color: style.color,
+                          }}
+                        >
+                          {crops.filter((c) => c.category === cat.id && c.featured).length} Featured
+                        </span>
                     </div>
 
-                    {/* Top seed names */}
-                    {topSeeds.length > 0 && (
+                    {/* Top crop names */}
+                    {topCrops.length > 0 && (
                       <div className="cat-overview-card-seeds">
                         <div className="cat-overview-card-seeds-title">
                           Popular picks
                         </div>
-                        {topSeeds.map((s) => (
+                        {topCrops.map((crop) => (
                           <Link
-                            key={s.id}
-                            to={`/seeds/${s.id}`}
+                              key={crop.id}
+                              to={`/crops/${crop.id}`}
                           >
                             <i className="bi bi-arrow-right-short" style={{ color: style.color }} />
-                            {s.name}
+                            {crop.name}
                           </Link>
                         ))}
                       </div>
                     )}
 
                     <Link
-                      to={`/seeds?cat=${cat.id}`}
+                      to={`/crops?cat=${cat.id}`}
                       className="btn btn-primary w-100"
                       style={{ background: style.color, borderColor: style.color }}
                     >

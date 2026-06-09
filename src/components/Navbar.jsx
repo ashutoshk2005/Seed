@@ -30,7 +30,7 @@ export default function Navbar() {
           <ul className="navbar-nav mx-auto gap-1">
             {[
               { to: "/",           label: "Home"       },
-              { to: "/seeds",      label: "Seeds"      },
+              { to: "/crops",      label: "Crops"      },
               { to: "/categories", label: "Categories" },
               { to: "/about",      label: "About"      },
               { to: "/contact",    label: "Contact"    },
@@ -50,12 +50,12 @@ export default function Navbar() {
 
           <div className="d-flex align-items-center gap-2 mt-3 mt-lg-0">
             <Link
-              to="/seeds"
+              to="/crops"
               className="btn btn-primary btn-sm"
               onClick={() => setOpen(false)}
             >
               <i className="bi bi-search me-1" />
-              Browse Seeds
+              Browse Crops
             </Link>
           </div>
         </div>

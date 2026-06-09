@@ -1,10 +1,10 @@
-// src/pages/Seeds.jsx
+// src/pages/Crops.jsx
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { seeds, categories } from "../data/seeds";
-import SeedCard from "../components/SeedCard";
+import { crops, categories } from "../data/crops";
+import CropCard from "../components/CropCard";
 
-export default function Seeds() {
+export default function Crops() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState(searchParams.get("cat") || "all");
@@ -24,9 +24,9 @@ export default function Seeds() {
     }
   };
 
-  let filtered = seeds.filter((s) => {
-    const matchCat = activeCategory === "all" || s.category === activeCategory;
-    const matchQ   = s.name.toLowerCase().includes(query.toLowerCase());
+  let filtered = crops.filter((crop) => {
+    const matchCat = activeCategory === "all" || crop.category === activeCategory;
+    const matchQ   = crop.name.toLowerCase().includes(query.toLowerCase());
     return matchCat && matchQ;
   });
 
@@ -43,11 +43,11 @@ export default function Seeds() {
           <nav aria-label="breadcrumb" className="mb-2">
             <ol className="breadcrumb" style={{ fontSize: ".84rem" }}>
               <li className="breadcrumb-item"><a href="/">Home</a></li>
-              <li className="breadcrumb-item active">Seeds</li>
+              <li className="breadcrumb-item active">Crops</li>
             </ol>
           </nav>
-          <h1>All Seeds</h1>
-          <p>Explore our full collection of certified, high-germination seeds.</p>
+          <h1>All Crops</h1>
+          <p>Explore our full collection of certified, high-germination crops.</p>
         </div>
       </div>
 
@@ -59,7 +59,7 @@ export default function Seeds() {
               <i className="bi bi-search search-icon" />
               <input
                 type="text"
-                placeholder="Search seeds (e.g. tomato, marigold, moringa)…"
+                placeholder="Search crops (e.g. tomato, marigold, moringa)…"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
@@ -87,10 +87,10 @@ export default function Seeds() {
             className={`filter-pill ${activeCategory === "all" ? "active" : ""}`}
             onClick={() => handleCategory("all")}
           >
-            All Seeds ({seeds.length})
+            All Crops ({crops.length})
           </button>
           {categories.map((cat) => {
-            const count = seeds.filter((s) => s.category === cat.id).length;
+            const count = crops.filter((c) => c.category === cat.id).length;
             return (
               <button
                 key={cat.id}
@@ -113,16 +113,16 @@ export default function Seeds() {
         {/* Grid */}
         {filtered.length > 0 ? (
           <div className="row g-4">
-            {filtered.map((seed) => (
-              <div className="col-sm-6 col-lg-4 col-xl-3" key={seed.id}>
-                <SeedCard seed={seed} />
+            {filtered.map((crop) => (
+              <div className="col-sm-6 col-lg-4 col-xl-3" key={crop.id}>
+                <CropCard crop={crop} />
               </div>
             ))}
           </div>
         ) : (
           <div className="no-results">
             <div className="icon">🌱</div>
-            <h4 style={{ fontFamily: "Playfair Display, serif" }}>No seeds found</h4>
+            <h4 style={{ fontFamily: "Playfair Display, serif" }}>No crops found</h4>
             <p>Try a different search term or category.</p>
             <button className="btn btn-primary" onClick={() => { setQuery(""); handleCategory("all"); }}>
               Clear Filters

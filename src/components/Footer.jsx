@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-lg-4 col-md-6">
             <div className="footer-logo mb-2">🌱 SeedKart</div>
             <p className="footer-desc mb-3">
-              India's trusted online seed store. We bring quality, certified seeds
+              India's trusted online crop store. We bring quality, certified crops
               right to your doorstep – from balcony gardens to full-scale farms.
             </p>
             <div>
@@ -32,7 +32,7 @@ export default function Footer() {
             <h5>Quick Links</h5>
             {[
               ["/",            "Home"      ],
-              ["/seeds",       "All Seeds" ],
+              ["/crops",       "All Crops" ],
               ["/categories",  "Categories"],
               ["/about",       "About Us"  ],
               ["/contact",     "Contact"   ],
@@ -45,11 +45,11 @@ export default function Footer() {
           <div className="col-lg-2 col-md-3 col-6">
             <h5>Categories</h5>
             {[
-              ["Vegetable Seeds", "/seeds?cat=vegetable"],
-              ["Fruit Seeds",     "/seeds?cat=fruit"    ],
-              ["Flower Seeds",    "/seeds?cat=flower"   ],
-              ["Herb Seeds",      "/seeds?cat=herb"     ],
-              ["Tree Seeds",      "/seeds?cat=tree"     ],
+              ["Vegetable Crops", "/crops?cat=vegetable"],
+              ["Fruit Crops",     "/crops?cat=fruit"    ],
+              ["Flower Crops",    "/crops?cat=flower"   ],
+              ["Herb Crops",      "/crops?cat=herb"     ],
+              ["Crops",           "/crops?cat=tree"     ],
             ].map(([label, to]) => (
               <Link key={to} to={to}>{label}</Link>
             ))}

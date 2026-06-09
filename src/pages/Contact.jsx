@@ -188,11 +188,11 @@ export default function Contact() {
                       <label>Related Category</label>
                       <select className="form-select" name="category" value={form.category} onChange={handleChange}>
                         <option value="">Select a category…</option>
-                        <option value="vegetable">Vegetable Seeds</option>
-                        <option value="fruit">Fruit Seeds</option>
-                        <option value="flower">Flower Seeds</option>
-                        <option value="herb">Herb Seeds</option>
-                        <option value="tree">Tree Seeds</option>
+                        <option value="vegetable">Vegetable Crops</option>
+                        <option value="fruit">Fruit Crops</option>
+                        <option value="flower">Flower Crops</option>
+                        <option value="herb">Herb Crops</option>
+                        <option value="tree">Crops</option>
                         <option value="other">Other / General</option>
                       </select>
                     </div>
@@ -211,7 +211,7 @@ export default function Contact() {
                         className={`form-control ${errors.message ? "is-invalid" : ""}`}
                         name="message" value={form.message} onChange={handleChange}
                         rows={5}
-                        placeholder="Tell us more about your query, which seeds you're interested in, or any growing challenges you're facing…"
+                        placeholder="Tell us more about your query, which crops you're interested in, or any growing challenges you're facing…"
                       />
                       {errors.message && <div className="invalid-feedback">{errors.message}</div>}
                     </div>
@@ -237,11 +237,11 @@ export default function Contact() {
           <div className="row g-3">
             {[
               { q: "How long does delivery take?",     a: "We dispatch within 24 hours. Delivery takes 3–7 business days depending on your pin code." },
-              { q: "Are your seeds organic?",           a: "Most of our seeds are naturally grown. All are non-GMO. Certified organic varieties are labelled accordingly." },
+              { q: "Are your crops organic?",           a: "Most of our crops are naturally grown. All are non-GMO. Certified organic varieties are labelled accordingly." },
               { q: "Do you offer bulk discounts?",      a: "Yes! Orders above ₹2,000 get 10% off. Contact us for wholesale / bulk pricing." },
-              { q: "What if my seeds don't germinate?", a: "We offer a 15-day replacement policy. Just email us with your order number and a photo." },
+              { q: "What if my crops don't germinate?", a: "We offer a 15-day replacement policy. Just email us with your order number and a photo." },
               { q: "Do you ship internationally?",      a: "Currently we ship within India only. International shipping is coming in 2025!" },
-              { q: "How should I store seeds?",         a: "Keep in a cool, dry, dark place. Our moisture-proof packaging helps extend shelf life for 1–2 years." },
+              { q: "How should I store crops?",         a: "Keep in a cool, dry, dark place. Our moisture-proof packaging helps extend shelf life for 1–2 years." },
             ].map(({ q, a }) => (
               <div className="col-md-6" key={q}>
                 <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "var(--radius)", padding: "1.2rem 1.4rem" }}>

@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import { Link } from "react-router-dom";
-import { getFeaturedSeeds, categories, seeds } from "../data/seeds";
-import SeedCard from "../components/SeedCard";
+import { getFeaturedCrops, categories, crops } from "../data/crops";
+import CropCard from "../components/CropCard";
 
 const catColors = {
   vegetable: { bg: "#EBF7DF", color: "#3A8C1E" },
@@ -16,7 +16,7 @@ const catIcons = {
 };
 
 export default function Home() {
-  const featured = getFeaturedSeeds().slice(0, 6);
+  const featured = getFeaturedCrops().slice(0, 6);
 
   return (
     <>
@@ -26,23 +26,24 @@ export default function Home() {
           <div className="row align-items-center gy-4">
             <div className="col-lg-20">
               <div className="hero-badge">
-                <span>🌱</span> India's 1 Seed Store
+                <span>🌱</span> India's 1 Crop Store
               </div>
               <h1 className="hero-title">
                 Grow Your <span className="accent">Green</span> World
                 <br />
-                with <span className="accent-orange">Premium</span> Seeds
+                with <span className="accent-orange">Premium</span> Crops
               </h1>
               <p className="hero-desc">
-                {/* Discover 200+ varieties of certified vegetable, fruit, flower,
-                herb & tree seeds. From your balcony garden to your backyard farm
-                — we have every seed you need. */}
+                Discover 200+ varieties of certified vegetables, fruits, Crops,
+                herbs .
+                <br></br>we
+                have every crop you need.
               </p>
 
               <div className="d-flex flex-wrap gap-3">
-                <Link to="/seeds" className="btn btn-primary btn-lg px-4">
+                <Link to="/crops" className="btn btn-primary btn-lg px-4">
                   <i className="bi bi-seeds me-1" />
-                  Shop Seeds
+                  Shop Crops
                 </Link>
                 <Link to="/categories" className="btn btn-outline-primary btn-lg px-4">
                   Browse Categories
@@ -51,7 +52,7 @@ export default function Home() {
 
               <div className="hero-stats">
                 {[
-                  { num: "200+", lbl: "Seed Varieties" },
+                  { num: "200+", lbl: "Crop Varieties" },
                   { num: "50K+", lbl: "Happy Growers"  },
                   { num: "98%",  lbl: "Germination Rate"},
                   { num: "Free", lbl: "Shipping ₹499+" },
@@ -73,7 +74,7 @@ export default function Home() {
                 <div className="hero-float-card c1">
                   <div className="icon"><i className="bi bi-patch-check-fill" /></div>
                   <div>
-                    <div style={{ fontWeight: 700, fontSize: ".88rem" }}>Certified Seeds</div>
+                    <div style={{ fontWeight: 700, fontSize: ".88rem" }}>Certified Crops</div>
                     <div style={{ fontSize: ".76rem", color: "var(--text-muted)" }}>Quality guaranteed</div>
                   </div>
                 </div>
@@ -90,20 +91,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CATEGORIES STRIP ─────────────────────────────────── */}
+      {/* ── CATEGORIES STRIP ───────────────────────────────────
       <section className="py-5 bg-white">
         <div className="container">
           <div className="text-center mb-4">
             <span className="section-tag">Browse by type</span>
-            <h2 className="section-title">Seed Categories</h2>
+            <h2 className="section-title">Crop Categories</h2>
           </div>
-          <div className="row g-3 justify-content-center">
+            <div className="row g-3 justify-content-center">
             {categories.map((cat) => {
               const style = catColors[cat.id] || {};
-              const count = seeds.filter((s) => s.category === cat.id).length;
+              const count = crops.filter((c) => c.category === cat.id).length;
               return (
                 <div className="col-6 col-sm-4 col-md-2" key={cat.id}>
-                  <Link to={`/seeds?cat=${cat.id}`} className="cat-card text-decoration-none">
+                  <Link to={`/crops?cat=${cat.id}`} className="cat-card text-decoration-none">
                     <div
                       className="cat-icon"
                       style={{ background: style.bg, color: style.color }}
@@ -118,24 +119,24 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* ── FEATURED SEEDS ───────────────────────────────────── */}
+      {/* ── FEATURED CROPS ───────────────────────────────────── */}
       <section className="py-5">
         <div className="container">
           <div className="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4">
             <div>
               <span className="section-tag">Handpicked</span>
-              <h2 className="section-title mb-0">Featured Seeds</h2>
+              <h2 className="section-title mb-0">Featured Crops</h2>
             </div>
-            <Link to="/seeds" className="btn btn-outline-primary">
-              View All Seeds <i className="bi bi-arrow-right ms-1" />
+            <Link to="/crops" className="btn btn-outline-primary">
+              View All Crops <i className="bi bi-arrow-right ms-1" />
             </Link>
           </div>
           <div className="row g-4">
-            {featured.map((seed) => (
-              <div className="col-sm-6 col-lg-4" key={seed.id}>
-                <SeedCard seed={seed} />
+            {featured.map((crop) => (
+              <div className="col-sm-6 col-lg-4" key={crop.id}>
+                <CropCard crop={crop} />
               </div>
             ))}
           </div>
@@ -148,13 +149,13 @@ export default function Home() {
           <div className="text-center mb-5">
             <span className="section-tag">Why choose us</span>
             <h2 className="section-title">The SeedKart Difference</h2>
-            <p className="section-sub">We're gardeners first. Every seed we sell is one we'd plant ourselves.</p>
+            <p className="section-sub">We're gardeners first. Every crop we sell is one we'd plant ourselves.</p>
           </div>
           <div className="row g-4">
             {[
               { icon: "🧪", title: "Lab Tested",       desc: "Every batch is tested for purity and germination rate before it reaches you." },
               { icon: "🌿", title: "Non-GMO",           desc: "We stock only open-pollinated, non-GMO, and heirloom varieties for safe gardening." },
-              { icon: "📦", title: "Secure Packaging",  desc: "Seeds are packed in moisture-proof pouches to maintain freshness during transit." },
+              { icon: "📦", title: "Secure Packaging",  desc: "Crops are packed in moisture-proof pouches to maintain freshness during transit." },
               { icon: "🚚", title: "Pan-India Delivery",desc: "We deliver to 20,000+ pin codes across India within 3–7 business days." },
               { icon: "🤝", title: "Expert Support",    desc: "Our in-house horticultural team is here to answer all your growing questions." },
               { icon: "🔁", title: "Easy Returns",      desc: "Not satisfied? We offer hassle-free returns and replacements within 15 days." },
@@ -235,7 +236,7 @@ export default function Home() {
           <div className="row g-4">
             {[
               { name: "Priya Sharma",   city: "Bengaluru", stars: 5, text: "My cherry tomatoes were absolutely amazing! Great germination and the plants are still producing after 4 months.", avatar: "PS" },
-              { name: "Rahul Mehta",    city: "Pune",      stars: 5, text: "Ordered moringa seeds and they sprouted within 10 days. Fast delivery and seeds are packed beautifully.", avatar: "RM" },
+              { name: "Rahul Mehta",    city: "Pune",      stars: 5, text: "Ordered moringa crops and they sprouted within 10 days. Fast delivery and crops are packed beautifully.", avatar: "RM" },
               { name: "Anita Nair",     city: "Kochi",     stars: 5, text: "Best marigolds I've ever grown! The colours are so vibrant. Will definitely order more next season.", avatar: "AN" },
             ].map(({ name, city, stars: s, text, avatar }) => (
               <div className="col-md-4" key={name}>
