@@ -182,49 +182,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── GROWING TIPS BANNER ──────────────────────────────── */}
-      {/* <section className="py-5">
-        <div className="container">
-          <div
-            style={{
-              background: "linear-gradient(135deg, var(--green-dark), var(--green-deeper))",
-              borderRadius: "var(--radius-lg)",
-              padding: "3rem 2.5rem",
-              color: "#fff",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute", top: "-40px", right: "-40px",
-                width: "220px", height: "220px",
-                background: "rgba(245,166,35,.18)",
-                borderRadius: "50%",
-              }}
-            />
-            <div className="row align-items-center gy-4">
-              <div className="col-lg-7">
-                <div style={{ fontSize: ".8rem", fontWeight: 600, letterSpacing: ".1em", opacity: .7, marginBottom: ".6rem" }}>
-                  FREE GARDENING GUIDE
-                </div>
-                <h2 style={{ fontFamily: "Playfair Display, serif", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 700, marginBottom: "1rem" }}>
-                  New to Gardening?
-                </h2>
-                <p style={{ opacity: .8, fontSize: ".95rem", lineHeight: 1.7, maxWidth: 480 }}>
-                  Download our free beginner's guide – covers soil preparation, watering
-                  schedules, companion planting, and seasonal calendars for Indian climates.
-                </p>
-              </div>
-              <div className="col-lg-5 text-lg-end">
-                <Link to="/contact" className="btn btn-warning btn-lg me-2">
-                  Get Free Guide <i className="bi bi-download ms-1" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* ── TESTIMONIALS ─────────────────────────────────────── */}
       <section className="py-5 bg-white">

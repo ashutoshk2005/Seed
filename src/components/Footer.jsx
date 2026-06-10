@@ -10,8 +10,8 @@ export default function Footer() {
           <div className="col-lg-4 col-md-6">
             <div className="footer-logo mb-2">🌱 SeedKart</div>
             <p className="footer-desc mb-3">
-              India's trusted online crop store. We bring quality, certified crops
-              right to your doorstep – from balcony gardens to full-scale farms.
+              India's trusted online crop B2B and B2C. We bring quality, certified crops
+              right to your Business – from field to wholesaler and retailer.
             </p>
             <div>
               {[

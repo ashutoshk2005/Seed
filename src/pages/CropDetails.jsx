@@ -9,7 +9,6 @@ export default function CropDetail() {
   const navigate = useNavigate();
   const crop = getCropById(id);
   const [qty, setQty] = useState(1);
-  const [toastVisible, setToastVisible] = useState(false);
 
   if (!crop) {
     return (
@@ -33,9 +32,12 @@ export default function CropDetail() {
     />
   ));
 
-  const handleEnquire = () => {
-    setToastVisible(true);
-    setTimeout(() => setToastVisible(false), 3500);
+  const handleWhatsAppEnquiry = () => {
+    const message = `Hi, I'm interested in "${crop.name}" (₹${crop.price}). Can you provide more details?`;
+    const encodedMessage = encodeURIComponent(message);
+    const phoneNumber = crop.sellerPhone;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -155,31 +157,7 @@ export default function CropDetail() {
                 </div>
               ))}
             </div>
-{/* 
-            How to grow
-            <div style={{ marginBottom: "1.5rem" }}>
-              <h6 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "1.05rem", marginBottom: ".65rem" }}>
-                🌱 How to Grow
-              </h6>
-              <p style={{ fontSize: ".9rem", color: "#555", lineHeight: 1.75, background: "#fff", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", padding: "1rem" }}>
-                {crop.howToGrow}
-              </p>
-            </div>
 
-            {/* Tips */}
-            {/* <div style={{ marginBottom: "2rem" }}>
-              <h6 style={{ fontFamily: "Playfair Display, serif", fontWeight: 700, fontSize: "1.05rem", marginBottom: ".65rem" }}>
-                💡 Pro Tips
-              </h6>
-              {crop.tips.map((tip, i) => (
-                <div className="tip-item" key={i}>
-                  <div className="dot" />
-                  <span style={{ fontSize: ".9rem", color: "#555" }}>{tip}</span>
-                </div>
-              ))}
-            </div> */} 
-
-            {/* Qty + CTA */}
             <div className="d-flex align-items-center gap-3 flex-wrap">
               <div
                 style={{
@@ -199,8 +177,22 @@ export default function CropDetail() {
                 >+</button>
               </div>
 
-              <button className="btn btn-primary px-4" onClick={handleEnquire}>
-                <i className="bi bi-envelope me-2" />Enquire Now
+              <button
+                onClick={handleWhatsAppEnquiry}
+                className="btn btn-whatsapp px-4"
+                style={{
+                  background: "#25D366",
+                  border: "none",
+                  color: "white",
+                  fontWeight: "500",
+                  borderRadius: "50px",
+                  cursor: "pointer",
+                  transition: "all var(--transition)",
+                }}
+                onMouseEnter={(e) => (e.target.style.background = "#20ba5a")}
+                onMouseLeave={(e) => (e.target.style.background = "#25D366")}
+              >
+                <i className="bi bi-whatsapp me-2" /> Enquire
               </button>
               <Link to="/contact" className="btn btn-outline-primary px-4">
                 Contact Us
@@ -208,7 +200,8 @@ export default function CropDetail() {
             </div>
 
             <div style={{ marginTop: "1.5rem", fontSize: ".82rem", color: "var(--text-muted)", display: "flex", gap: "1.2rem", flexWrap: "wrap" }}>
-              <span><i className="bi bi-truck me-1" style={{ color: "var(--green)" }} />Free shipping above ₹499</span>
+              <span><i className="bi bi-phone me-1" style={{ color: "var(--green)" }} />Contact Us to get best deal</span>
+              <span><i className="bi bi-truck me-1" style={{ color: "var(--green)" }} />We Deal in Wholesale and Retail</span>
               <span><i className="bi bi-patch-check me-1" style={{ color: "var(--green)" }} />Certified quality</span>
               <span><i className="bi bi-arrow-repeat me-1" style={{ color: "var(--green)" }} />15-day return policy</span>
             </div>
@@ -231,14 +224,6 @@ export default function CropDetail() {
           </div>
         )}
       </div>
-
-      {/* Toast */}
-      {toastVisible && (
-        <div className="sk-toast">
-          <i className="bi bi-check-circle-fill" style={{ fontSize: "1.1rem" }} />
-          Enquiry sent! We'll contact you shortly.
-        </div>
-      )}
     </>
   );
 }

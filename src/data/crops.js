@@ -10,6 +10,53 @@ export const categories = [
 ];
 
 export const crops = [
+
+
+    // ── Crops ────────────────────────────────────────────────────────────────────
+  {
+    id: 15,
+    name: "Wheat",
+    category: "tree",
+    price: 249,
+    season: "Summer",
+    germinationDays: "14–21",
+    rating: 4.6,
+    stock: 75,
+    featured: true,
+    image: "https://pramoda.co.in/wp-content/uploads/2018/12/Wheat.jpg",
+    shortDesc: "India's medicinal wonder tree – fast growing.",
+    description:
+      "Wheat grow into fast-growing, drought-tolerant plants with incredible nutritional and agricultural value. Every part of the wheat plant – grains, straw, leaves – has a practical use. A must-have for any sustainable farm.",
+    howToGrow:
+      "Sow fresh seeds 2 cm deep in sandy loam. Keep warm (25 °C+). Transplant to permanent location when 30 cm tall. Drought-hardy once established.",
+    tips: ["Use fresh seeds – viability drops quickly", "Perfect for agroforestry", "Leaves make excellent pest-control spray"],
+    weight: "1 Quantal (100 kg) - 1 bag",
+    sellerPhone: "919876543210",
+  },
+  {
+    id: 16,
+    name: "Rice",
+    category: "tree",
+    price: 199,
+    season: "Summer",
+    germinationDays: "7–14",
+    rating: 4.8,
+    stock: 110,
+    featured: false,
+    image: "https://www.pachaa.in/image/cache/catalog/riceDals/rice/buy-marudham-rice-raw-sona-masoori-300x300.jpg",
+    shortDesc: "Superfood tree – leaves, pods & seeds all edible.",
+    description:
+      "Rice is a staple food in many cultures, used in dishes like sambar; leaves in curries and health supplements.",
+    howToGrow:
+      "Sow directly 2–3 cm deep in well-drained soil with full sun. Germinates quickly in warm soil. Prune annually to control height and encourage new growth.",
+    tips: ["Grows 3–5 m/year", "Harvest young leaves regularly", "Deep taproot – drought tolerant after establishment"],
+        weight: "1 Quantal (100 kg) - 1 bag",
+    sellerPhone: "919876543210",
+  },
+
+
+  
+
   // ── Vegetables ──────────────────────────────────────────────────────────────
 
 {
@@ -27,7 +74,7 @@ export const crops = [
     description: "Potatoes are a versatile and starchy tuber that is a staple food in many cuisines. They are easy to grow and can be stored for long periods.",
     howToGrow: "Plant seed potatoes in well-drained soil with good sunlight. Water regularly and harvest when the foliage dies back.",
     tips: ["Choose certified seed potatoes", "Hill soil around plants to protect tubers", "Store in a cool, dark place"],
-    weight: "1kg (≈ 10 seed potatoes)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
 
 },
@@ -49,7 +96,7 @@ export const crops = [
     howToGrow:
       "Sow 6mm deep in seed-starting mix indoors 6–8 weeks before last frost. Transplant outdoors when nighttime temps stay above 10 °C. Water regularly; support with stakes or cages.",
     tips: ["Full sun preferred", "Water deeply twice a week", "Pinch suckers for larger fruits"],
-    weight: "1g (≈ 300 seeds)",
+        weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
   {
@@ -69,7 +116,7 @@ export const crops = [
     howToGrow:
       "Direct sow 1cm deep, 5cm apart in well-drained fertile soil. Keep soil moist. Harvest outer leaves when 8–10 cm long.",
     tips: ["Best in full sun to partial shade", "Avoid transplanting – direct sow preferred", "Harvest in morning for best flavour"],
-    weight: "5g (≈ 500 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
   {
@@ -89,7 +136,7 @@ export const crops = [
     howToGrow:
       "Start indoors 8–10 weeks before last frost. Transplant into warm, sunny spots with well-amended soil. Water consistently.",
     tips: ["Needs warm soil (20 °C+)", "Feed with potassium-rich fertiliser during fruiting", "Stake plants when heavy with fruit"],
-    weight: "0.5g (≈ 150 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
   {
@@ -109,7 +156,7 @@ export const crops = [
     howToGrow:
       "Sow seeds in trays, 1 cm deep. Transplant when 15 cm tall. Water generously and mulch to retain soil moisture.",
     tips: ["Loves heat and full sun", "Harvest while skin is shiny", "Rotate crops annually"],
-    weight: "1g (≈ 200 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
 
@@ -131,7 +178,7 @@ export const crops = [
     howToGrow:
       "Direct sow 3 seeds per hole, 2.5 cm deep, in hills 2 m apart after soil warms to 21 °C. Thin to strongest seedling.",
     tips: ["Needs lots of space", "Reduce watering as fruit nears maturity for sweeter flesh", "Tap the fruit – hollow sound = ripe"],
-    weight: "5g (≈ 60 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
   {
@@ -151,7 +198,7 @@ export const crops = [
     howToGrow:
       "Sow seeds in raised mounds in full sun. Water deeply but infrequently. Train vines; support heavy fruits with slings if trellising.",
     tips: ["Full sun essential", "Avoid wetting foliage", "Stop watering 1 week before harvest"],
-    weight: "2g (≈ 80 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
 
@@ -173,7 +220,7 @@ export const crops = [
     howToGrow:
       "Sow 3–4 seeds per hole, 1 cm deep, in full sun with well-drained soil. Thin to the strongest plant. Water regularly but avoid waterlogging.",
     tips: ["Fruits best in warm, frost-free climates", "Avoid waterlogged soil", "Plant multiple for cross-pollination"],
-    weight: "2g (≈ 50 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
 
@@ -194,7 +241,7 @@ export const crops = [
     howToGrow:
       "Sow 3–4 seeds per hole, 1 cm deep, in full sun with well-drained soil. Thin to the strongest plant. Water regularly but avoid waterlogging.",
     tips: ["Fruits best in warm, frost-free climates", "Avoid waterlogged soil", "Plant multiple for cross-pollination"],
-    weight: "2g (≈ 50 seeds)",
+        weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
 
@@ -215,7 +262,7 @@ export const crops = [
     howToGrow:
       "Sow 3–4 seeds per hole, 1 cm deep, in full sun with well-drained soil. Thin to the strongest plant. Water regularly but avoid waterlogging.",
     tips: ["Fruits best in warm, frost-free climates", "Avoid waterlogged soil", "Plant multiple for cross-pollination"],
-    weight: "2g (≈ 50 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
 
@@ -236,7 +283,7 @@ export const crops = [
     howToGrow:
       "Sow 3–4 seeds per hole, 1 cm deep, in full sun with well-drained soil. Thin to the strongest plant. Water regularly but avoid waterlogging.",
     tips: ["Fruits best in warm, frost-free climates", "Avoid waterlogged soil", "Plant multiple for cross-pollination"],
-    weight: "2g (≈ 50 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
 
@@ -360,7 +407,7 @@ export const crops = [
     howToGrow:
       "Crush seeds slightly before sowing. Direct sow 1 cm deep in partial shade in summer, full sun in winter. Sow every 3 weeks for continuous supply.",
     tips: ["Bolts quickly in heat – use bolt-resistant variety", "Harvest outer leaves first", "Let some plants go to seed for spice"],
-    weight: "5g (≈ 200 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
   {
@@ -380,7 +427,7 @@ export const crops = [
     howToGrow:
       "Surface sow seeds; do not cover. Keep moist in a warm location. Plant in containers to control spreading. Harvest regularly.",
     tips: ["Contains growth in pots", "Loves moisture", "Harvest before flowering for best flavour"],
-    weight: "0.5g (≈ 500 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
   {
@@ -399,55 +446,11 @@ export const crops = [
       "Methi germinate within days and produce tender, slightly bitter leaves that are staples of Indian cooking. The seeds are used as a spice and the sprouts are highly nutritious. One of the fastest-growing kitchen herbs.",
     howToGrow:
       "Direct sow thickly in autumn/winter. Water lightly every day. Harvest leaves from 15–20 days. Resow every 2 weeks for continuous supply.",
-    tips: ["Superb in containers", "Harvest whole plant at once or cut-and-come-again", "Soak seeds overnight for faster germination"],
-    weight: "10g (≈ 1000 seeds)",
+      tips: ["Superb in containers", "Harvest whole plant at once or cut-and-come-again", "Soak seeds overnight for faster germination"],
+      weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
 
-  // ── Crops ────────────────────────────────────────────────────────────────────
-  {
-    id: 15,
-    name: "Wheat",
-    category: "tree",
-    price: 249,
-    season: "Summer",
-    germinationDays: "14–21",
-    rating: 4.6,
-    stock: 75,
-    featured: true,
-    image: "https://pramoda.co.in/wp-content/uploads/2018/12/Wheat.jpg",
-    shortDesc: "India's medicinal wonder tree – fast growing.",
-    description:
-      "Wheat grow into fast-growing, drought-tolerant plants with incredible nutritional and agricultural value. Every part of the wheat plant – grains, straw, leaves – has a practical use. A must-have for any sustainable farm.",
-    howToGrow:
-      "Sow fresh seeds 2 cm deep in sandy loam. Keep warm (25 °C+). Transplant to permanent location when 30 cm tall. Drought-hardy once established.",
-    tips: ["Use fresh seeds – viability drops quickly", "Perfect for agroforestry", "Leaves make excellent pest-control spray"],
-    weight: "20g (≈ 10 seeds)",
-    sellerPhone: "919876543210",
-  },
-  {
-    id: 16,
-    name: "Rice",
-    category: "tree",
-    price: 199,
-    season: "Summer",
-    germinationDays: "7–14",
-    rating: 4.8,
-    stock: 110,
-    featured: false,
-    image: "https://www.pachaa.in/image/cache/catalog/riceDals/rice/buy-marudham-rice-raw-sona-masoori-300x300.jpg",
-    shortDesc: "Superfood tree – leaves, pods & seeds all edible.",
-    description:
-      "Rice is a staple food in many cultures, used in dishes like sambar; leaves in curries and health supplements.",
-    howToGrow:
-      "Sow directly 2–3 cm deep in well-drained soil with full sun. Germinates quickly in warm soil. Prune annually to control height and encourage new growth.",
-    tips: ["Grows 3–5 m/year", "Harvest young leaves regularly", "Deep taproot – drought tolerant after establishment"],
-    weight: "10g (≈ 15 seeds)",
-    sellerPhone: "919876543210",
-  },
-
-
-  
 
   // ── Extra Vegetables ─────────────────────────────────────────────────────────
   {
@@ -467,7 +470,7 @@ export const crops = [
     howToGrow:
       "Soak seeds overnight. Direct sow 2 cm deep in warm, well-drained soil. Space 30 cm apart. Water regularly during flowering.",
     tips: ["Loves heat – sow when soil is 21 °C+", "Harvest when 8–10 cm long for tenderness", "Wear gloves – plant irritates skin"],
-    weight: "5g (≈ 60 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
   {
@@ -487,7 +490,7 @@ export const crops = [
     howToGrow:
       "Sow 2–3 seeds per hole, 2 cm deep. Provide a strong trellis or fence. Water generously. Harvest when tender at 20–30 cm.",
     tips: ["Needs sturdy support", "Water daily in peak summer", "Harvest young for best flavour"],
-    weight: "5g (≈ 30 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
   {
@@ -507,7 +510,7 @@ export const crops = [
     howToGrow:
       "Nick seeds with a file and soak 24 hours before sowing 2 cm deep. Train on trellis. Harvest when green and firm.",
     tips: ["Nick seed coat to improve germination", "Harvest before fruits turn yellow", "Both male and female flowers needed – hand pollinate if needed"],
-    weight: "5g (≈ 25 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   },
 
@@ -528,7 +531,7 @@ export const crops = [
     howToGrow:
       "Sow seeds in well-drained soil. Provide full sun and regular watering. Prune to maintain shape and promote fruiting.",
     tips: ["Prefers alkaline soil", "Requires full sun", "Prune annually to encourage fruiting"],
-    weight: "5g (≈ 20 seeds)",
+    weight: "1 Quantal (100 kg) - 1 bag",
     sellerPhone: "919876543210",
   }
 
