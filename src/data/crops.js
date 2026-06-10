@@ -59,25 +59,25 @@ export const crops = [
 
   // ── Vegetables ──────────────────────────────────────────────────────────────
 
-{
-    id: 16, 
-    name: "Potato",
-    category: "vegetable",
-    price: 59,
-    season: "Winter",
-    germinationDays: "2–5",
-    rating: 4.7,
-    stock: 500,
-    featured: true,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh5WaMvZsSAmZGV4UadscRd_EpDN1eNbNa1w&s",
-    shortDesc: "Versatile, starchy tuber – a kitchen essential.",
-    description: "Potatoes are a versatile and starchy tuber that is a staple food in many cuisines. They are easy to grow and can be stored for long periods.",
-    howToGrow: "Plant seed potatoes in well-drained soil with good sunlight. Water regularly and harvest when the foliage dies back.",
-    tips: ["Choose certified seed potatoes", "Hill soil around plants to protect tubers", "Store in a cool, dark place"],
-    weight: "1 Quantal (100 kg) - 1 bag",
-    sellerPhone: "919876543210",
+// {
+//     id: 16, 
+//     name: "Potato",
+//     category: "vegetable",
+//     price: 59,
+//     season: "Winter",
+//     germinationDays: "2–5",
+//     rating: 4.7,
+//     stock: 500,
+//     featured: true,
+//     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh5WaMvZsSAmZGV4UadscRd_EpDN1eNbNa1w&s",
+//     shortDesc: "Versatile, starchy tuber – a kitchen essential.",
+//     description: "Potatoes are a versatile and starchy tuber that is a staple food in many cuisines. They are easy to grow and can be stored for long periods.",
+//     howToGrow: "Plant seed potatoes in well-drained soil with good sunlight. Water regularly and harvest when the foliage dies back.",
+//     tips: ["Choose certified seed potatoes", "Hill soil around plants to protect tubers", "Store in a cool, dark place"],
+//     weight: "1 Quantal (100 kg) - 1 bag",
+//     sellerPhone: "919876543210",
 
-},
+// },
 
   {
     id: 1,
